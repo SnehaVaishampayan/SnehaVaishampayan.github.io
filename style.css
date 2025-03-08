@@ -1,0 +1,158 @@
+  :root {
+      --primary-color: #3498db;
+      --secondary-color: #e74c3c;
+      --accent-color: #2ecc71;
+      --background-color: #f4f4f4;
+      --text-color: #333;
+  }
+  body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text-color);
+      background-color: var(--background-color);
+  }
+  .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 2rem;
+  }
+  .section {
+      margin-bottom: 4rem;
+      position: relative;
+      padding-top: 80px;
+      margin-top: -80px;
+  }
+  .section::before {
+      content: '';
+      position: absolute;
+      left: -40px;
+      width: 80px;
+      height: 80px;
+      background-color: var(--primary-color);
+      opacity: 0.1;
+      transform: rotate(45deg);
+      z-index: -1;
+  }
+  .profile-picture {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 2rem;
+      border: 4px solid var(--primary-color);
+  }
+  .nav-link {
+      position: relative;
+      color: var(--text-color);
+      text-decoration: none;
+      padding-bottom: 5px;
+  }
+  .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: var(--secondary-color);
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+  }
+  .nav-link:hover::after {
+      transform: scaleX(1);
+  }
+  .angular-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      opacity: 0.05;
+      pointer-events: none;
+  }
+  .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+  }
+  .social-link {
+      display: inline-block;
+      transition: transform 0.3s ease;
+  }
+  .social-link:hover {
+      transform: scale(1.1);
+  }
+  .social-icon {
+      width: 24px;
+      height: 24px;
+  }
+
+  .social-link-stack-overflow .social-icon {
+      width: 21px;
+      height: 21px;
+  }
+
+  .social-link-freelancer .social-icon {
+      width: 26px;
+      height: 26px;
+  }
+
+  .skills-logos {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-bottom: 2rem;
+  }
+  .skill-logo {
+      width: 50px;
+      height: 50px;
+      transition: transform 0.3s ease;
+  }
+
+  .skill-item {
+      margin-bottom: 1rem;
+  }
+  .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
+  }
+
+  .skill-item {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+  }
+
+  .under-construction {
+      background-color: var(--accent-color);
+      color: white;
+      padding: 2rem;
+      border-radius: 8px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+  }
+
+  /* New styles for sticky navigation */
+  .sticky-nav {
+      position: sticky;
+      top: 0;
+      background-color: transparent; /* Change to transparent */
+      /*backdrop-filter: blur(5px);*/
+      z-index: 1000;
+      padding: 1rem 0;
+      transition: box-shadow 0.3s ease, background-color 0.3s ease; /* Add transition for background-color */
+  }
+
+  .sticky-nav.scrolled {
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      background-color: rgba(255, 255, 255, 0.9); /* Add background color when scrolled */
+      backdrop-filter: blur(5px); /* Add blur effect when scrolled */
+  }
