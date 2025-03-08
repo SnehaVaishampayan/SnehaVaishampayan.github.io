@@ -57,6 +57,13 @@
       background-size: 18px 18px;
       background-repeat: repeat;
   }
+  div { 
+    margin: 5px;
+    display: inline-block;
+    height:300px;
+    width:400px;
+    background: repeating-linear-gradient( -45deg, #000 0px, #000 5px, #333 6px, #333 11px, #000 12px);
+  }
   .social-links {
       display: flex;
       justify-content: center;
