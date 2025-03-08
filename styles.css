@@ -49,14 +49,14 @@
   .nav-link:hover::after {
       transform: scaleX(1);
   }
-  div {
+/*   div {
       background-color: #f8f8f9;
       opacity: 0.2;
       background-image:  linear-gradient(135deg, #45f7f7 25%, transparent 25%), linear-gradient(225deg, #45f7f7 25%, transparent 25%), linear-gradient(45deg, #45f7f7 25%, transparent 25%), linear-gradient(315deg, #45f7f7 25%, #f8f8f9 25%);
       background-position:  9px 0, 9px 0, 0 0, 0 0;
       background-size: 18px 18px;
       background-repeat: repeat;
-  }
+  } */
 /*   div { 
     margin: 5px;
     display: inline-block;
