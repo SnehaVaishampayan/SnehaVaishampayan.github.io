@@ -190,27 +190,65 @@
             </div>
         </div>
     </section>
+    <section class="tiles-container">
+        <div class="tile">
+            <h2>Tile 1</h2>
+            <p>
+                GeeksforGeeks is a leading
+                platform that provides computer
+                science resources and coding
+                challenges for programmers and
+                technology enthusiasts
+            </p>
+        </div>
 
+        <div class="tile">
+            <h2>Tile 2</h2>
+            <p>
+                GeeksforGeeks is a leading
+                platform that provides computer
+                science resources and coding
+                challenges for programmers and
+                technology enthusiasts
+            </p>
+        </div>
+
+        <div class="tile">
+            <h2>Tile 3</h2>
+            <p>
+                GeeksforGeeks is a leading
+                platform that provides computer
+                science resources and coding
+                challenges for programmers and
+                technology enthusiasts
+            </p>
+        </div>
+
+        <div class="tile">
+            <h2>Tile 4</h2>
+            <p>
+                GeeksforGeeks is a leading
+                platform that provides computer
+                science resources and coding
+                challenges for programmers and
+                technology enthusiasts
+            </p>
+        </div>
+    </section>
+    
     <section id="projects" class="section">
         <h2 class="text-2xl font-light mb-8" style="color: var(--primary-color);">Projects </h2>
 
         <div class="mb-8 project-tile bg-white p-6 rounded-lg shadow-md">
-            <h3 class="text-xl mb-2 flex items-center" style="color: var(--secondary-color);">ZYLYTY Web Forum App</h3>
-            <p class="text-gray-700 mb-2 font-semibold">A highly-efficient, dynamic, and secure REST API backend for a web forum application.</p>
-            <p class="text-gray-700 mb-4">Check out the <a href="https://github.com/vytaux/zylyty-web-forum-app" target="_blank" class="font-semibold hover:underline text-sky-600">project's GitHub</a> for complete endpoints documentation and see the <a href="http://54.174.201.104" target="_blank" class="font-semibold hover:underline text-sky-600">Live Demo</a>.</p>
+<!--             <h3 class="text-xl mb-2 flex items-center" style="color: var(--secondary-color);">ZYLYTY Web Forum App</h3> -->
+<!--             <p class="text-gray-700 mb-2 font-semibold">A highly-efficient, dynamic, and secure REST API backend for a web forum application.</p> -->
+<!--             <p class="text-gray-700 mb-4">Check out the <a href="https://github.com/vytaux/zylyty-web-forum-app" target="_blank" class="font-semibold hover:underline text-sky-600">project's GitHub</a> for complete endpoints documentation and see the <a href="http://54.174.201.104" target="_blank" class="font-semibold hover:underline text-sky-600">Live Demo</a>.</p> -->
             <ul class="space-y-2 mb-4 mt-2">
                 <li class="flex items-start">
                     <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                    <span class="text-gray-700">Built with Java and Spring Boot.</span>
+<!--                     <span class="text-gray-700">Built with Java and Spring Boot.</span> -->
                 </li>
-                <li class="flex items-start">
-                    <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                    <span class="text-gray-700">Supports user registration and authentication, category management, thread creation, post management, and search functionality.</span>
-                </li>
-                <li class="flex items-start">
-                    <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                    <span class="text-gray-700">Fully dockerized, enabling rapid deployment and scalability in any environment.</span>
-                </li>
+               \
             </ul>
 
             <p class="text-gray-700 mb-4 ">I built this app as part of a challenge on ZYLYTY, where I developed a REST API backend to meet the certification requirements. You can also view my <a href="https://zylyty.com/cv?userId=6dad4097-67f3-41e0-842d-029310e9bdb2" target="_blank" class="font-semibold text-sky-600 hover:underline">ZYLYTY Certification</a>.</p>
@@ -258,80 +296,6 @@
 </footer>
 
 <script>
-    // document.addEventListener('DOMContentLoaded', (event) => {
-    //     gsap.from(".profile-picture", {
-    //         opacity: 0,
-    //         scale: 0.8,
-    //         duration: 1,
-    //         ease: "power3.out"
-    //     });
-
-    //     gsap.from("header h1, header p, .social-links, section", {
-    //         opacity: 0,
-    //         y: 20,
-    //         duration: 1,
-    //         stagger: 0.2,
-    //         ease: "power3.out"
-    //     });
-
-    //     gsap.from(".skill-logo", {
-    //         opacity: 0,
-    //         scale: 0.5,
-    //         duration: 0.5,
-    //         stagger: 0.1,
-    //         ease: "power3.out",
-    //         scrollTrigger: {
-    //             trigger: "#skills",
-    //             start: "top 80%"
-    //         }
-    //     });
-
-    //     gsap.from(".skill-item", {
-    //         opacity: 0,
-    //         x: -50,
-    //         duration: 0.5,
-    //         stagger: 0.1,
-    //         ease: "power3.out",
-    //         scrollTrigger: {
-    //             trigger: ".skill-bars",
-    //             start: "top 80%"
-    //         }
-    //     });
-
-    //     gsap.utils.toArray('.skill-progress').forEach(skill => {
-    //         gsap.to(skill, {
-    //             width: skill.style.width,
-    //             duration: 1.5,
-    //             ease: "power3.out",
-    //             scrollTrigger: {
-    //                 trigger: skill,
-    //                 start: "top 90%"
-    //             }
-    //         });
-    //     });
-
-    //     gsap.from("#experience", {
-    //         opacity: 0,
-    //         duration: 0.8,
-    //         ease: "power3.out",
-    //         scrollTrigger: {
-    //             trigger: "#experience",
-    //             start: "top 80%"
-    //         }
-    //     });
-
-    //     gsap.from(".under-construction", {
-    //         opacity: 0,
-    //         scale: 0.9,
-    //         duration: 0.8,
-    //         ease: "power3.out",
-    //         scrollTrigger: {
-    //             trigger: "#projects",
-    //             start: "top 80%"
-    //         }
-    //     });
-
-
         // --------------- Sticky nav ---------------------
         const nav = document.querySelector('.sticky-nav');
         let lastScrollTop = window.scrollY || document.documentElement.scrollTop;
