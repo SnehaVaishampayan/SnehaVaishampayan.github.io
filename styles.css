@@ -133,14 +133,19 @@
       transform: scale(1.05);
   }
 
-.row_certificates {
-  display: flex;
-}
+   .image-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 16px;
+   }
 
-.column_certificates {
-  flex: 33.33%;
-  padding: 5px;
-}
+   .image-gallery img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+   }
+
 
 /* The Modal (background) */
 .modal {
