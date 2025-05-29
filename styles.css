@@ -132,6 +132,15 @@
   .tile:hover {
       transform: scale(1.05);
   }
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 33.33%;
+  padding: 5px;
+}
 #myImg {
   border-radius: 5px;
   cursor: pointer;
