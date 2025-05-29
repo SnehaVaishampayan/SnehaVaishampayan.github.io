@@ -133,11 +133,11 @@
       transform: scale(1.05);
   }
 
-.row {
+.row_certificates {
   display: flex;
 }
 
-.column {
+.column_certificates {
   flex: 33.33%;
   padding: 5px;
 }
