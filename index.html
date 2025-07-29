@@ -1,4 +1,26 @@
-<!DOCTYPE html>
+  const [show, setShow] = useState(true);
+  const { isAuthenticated, setIsAuthenticated } = useContext(Context);
+  const navigateTo = useNavigate();
+
+  const handleLogout = async () => {
+    await axios
+      .get("http://localhost:4000/api/v1/user/patient/logout", {
+        withCredentials: true,
+      })
+      .then((res) => {
+        toast.success(res.data.message);
+        setIsAuthenticated(false);
+        
+      })
+      .catch((err) => {
+        toast.error(err.response.data.message);
+      });
+  };
+
+  const gotoLogin = async () => {
+    navigateTo("/login");
+    setShow(!show)
+  };<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -118,19 +140,16 @@
             <div class="bg-white p-6 rounded-lg shadow-md experience-card">
                 <h3 class="text-xl mb-2" style="color: var(--secondary-color);"> Software Engineer</h3>
                 <p class="text-gray-600 mb-2">ALS Goldspot Discoveries Inc | Vancouver, Canada | 06/2022 - 08/2022</p>
-                <p class="text-gray-700">Designed, developed, and maintained Web applications</p>
+                <p class="text-gray-700"> Individual contributor for the development of a backend Rest APIs, providing access to other internal services. </p>
                 <ul class="space-y-2 mb-4 mt-2">
+                   
                     <li class="flex items-start">
                         <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                        <span class="text-gray-700">Contributing to the development of a backend Rest APIs, providing access to other internal services.</span>
-                    </li>
-                    <li class="flex items-start">
-                        <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                        <span class="text-gray-700"> Focusing on backend services and client collaboration, I gathered requirements, developed REST APIs using Core Java and Spring Boot, and ensured seamless integration of new features. My efforts significantly improved the application’s functionality and user engagement.</span>
+                        <span class="text-gray-700"> Focusing on backend services and client collaboration, I developed REST APIs using Python and AWS in th Serverless architecture. My efforts significantly improved the application’s functionality and user engagement.</span>
                     </li> 
                     <li class="flex items-start">
                         <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                        <span class="text-gray-700">Result-oriented implementation with a structured approach to analyzing the key aspects of business problems. Prioritizing and documenting requirements to functional specifications. Defining and executing the features. Delivering results with tight deadlines and high-quality code.</span>
+                        <span class="text-gray-700">Result-oriented implementation with a structured approach to analyzing the key aspects of feature requirements. Rewriting the existing Node JS APIs into maintainable, structured Python AWS Lambda function. Delivering results with tight deadlines and high-quality code.</span>
                     </li>   
                     <li class="flex items-start">
                         <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
@@ -138,12 +157,9 @@
                     </li>                       
                 </ul>
                 <div class="flex flex-wrap gap-4 mt-6">
-                    <span class="skill-item">Java</span>
+                    <span class="skill-item">Python</span>
                     <span class="skill-item">Amazon Web Services</span>            
-                    <span class="skill-item">Spring Framework</span>
-                    <span class="skill-item">Spring Boot</span>
-                    <span class="skill-item">Docker</span>
-                    <span class="skill-item">MySQL</span>  
+                    <span class="skill-item">Terraform</span>
                 </div>
             </div>
 
